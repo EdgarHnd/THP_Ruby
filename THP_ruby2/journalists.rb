@@ -71,13 +71,19 @@ def fifty_shortest(j)
     puts "Voici les 50 handles les plus cours : #{shortest_array}"
 end
 
+def start_uppercase(handle_list)
+    uppercase_array = handle_list.grep(/^@[A-Z]/)
+    puts "Il y a #{uppercase_array.length} qui commencent par une majuscule"
+end
+
 #Results
 puts "Il y a #{journalists.size} journalists"
-handle_with_number(journalists)
+handle_with_number(journalists) 
 has_Aude(journalists)
 start_with_upper(journalists)
 has_upper(journalists)
 number_underscore(journalists)
-#print journalists_sort
+print journalists_sort
 fifty_shortest(journalists)
 puts "Le handle @epenser se trouve à la position : #{journalists.index("@epenser")}"
+start_uppercase(journalists)
